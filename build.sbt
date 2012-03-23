@@ -14,14 +14,15 @@ seq(webSettings :_*)
 
 
 /** Shell */
-shellPrompt := { state => System.getProperty("user.name") + "> " }
+shellPrompt := { state => System.getProperty("user.name") + " " +System.getProperty("user.dir") + " sbt> " }
+
 
 shellPrompt in ThisBuild := { state => Project.extract(state).currentRef.project + "> " }
 
 /** Dependencies */
 resolvers ++= Seq(
                  //"snapshots-repo" at "http://scala-tools.org/repo-snapshots", 
-                  "Local Maven Repository" at "file://$M2_REPO")
+                  "Local Maven Repository" at "file://"+Path.userHome.absolutePath+"/.m2/repository")
 
 
 
