@@ -7,6 +7,10 @@ organization := "Lift"
 
 scalaVersion := "2.9.1"
 
+//xsbt-webplugin isn't published for 0.11.3 right now, so use 0.11.2
+
+sbtVersion := "0.11.2"
+
 //for web plugin
 seq(webSettings :_*)
 
@@ -44,5 +48,9 @@ testOptions := Seq(Tests.Filter(s =>
     s.contains("UserGuide") || 
     s.matches("org.specs2.guide.*")))
 
+
+
 /** Console */
-initialCommands in console := "import org.specs2._"
+initialCommands in console in Test := "import org.specs2._"
+
+/* run test:console at the sbt prompt in order to use specs2 classes */
