@@ -22,13 +22,13 @@ object MyBuild extends Build{
     libraryDependencies ++= Seq(
       "net.liftweb" %% "lift-webkit" % liftVersion % "compile",
       "net.liftweb" %% "lift-mapper" % liftVersion % "compile",
-      "org.mortbay.jetty" % "jetty" % "6.1.26" % "container",
+      "org.mortbay.jetty" % "jetty" % "6.1.26" % "container,test",
       "junit" % "junit" % "4.7" % "test",
       "ch.qos.logback" % "logback-classic" % "0.9.26",
-      "org.scala-tools.testing" %% "specs" % "1.6.9" % "test",
-      "com.h2database" % "h2" % "1.2.147",
-      "org.specs2" %% "specs2" % "1.6.1",
-      "org.specs2" %% "specs2-scalaz-core" % "6.0.1" % "test"
+       "com.h2database" % "h2" % "1.2.147",
+      //to use specs2 in the console, comment out the % "test" so specs2 is contained in the main dependencies
+      "org.specs2" %% "specs2" % "1.11" % "test"
+      //,"org.specs2" %% "specs2-scalaz-core" % "6.0.1" % "test"
 
       //  "org.scala-tools.testing" %% "scalacheck" % "1.9", 
       //  "org.scala-tools.testing" % "test-interface" % "0.5", 
