@@ -4,15 +4,11 @@ import java.io.File
 
 import scala.xml.XML
 
-import org.specs.Specification
-import org.specs.runner.JUnit4
-
 import net.liftweb.common.Full
 import net.liftweb.util.PCDataXmlParser
 
-class XmlSourceSpecsTest extends JUnit4(XmlSourceSpecs)
 
-object XmlSourceSpecs extends Specification {
+object XmlSourceSpecs extends org.specs2.mutable.Specification with org.specs2.matcher.ThrownMessages {
 
   "XML Sources" should {
     "be well-formed" in {
