@@ -54,8 +54,8 @@ class Boot {
     // each page, just comment this line out.
     LiftRules.setSiteMapFunc(() => sitemapMutators(sitemap))
 
-    // Use jQuery 1.4
-    LiftRules.jsArtifacts = net.liftweb.http.js.jquery.JQuery14Artifacts
+    // Use jQuery
+    LiftRules.jsArtifacts = net.liftweb.http.js.jquery.JQueryArtifacts
 
     //Show the spinny image when an Ajax call starts
     LiftRules.ajaxStart =
