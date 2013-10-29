@@ -14,7 +14,7 @@ if ! [ -f $DIR0/sbt-launch.jar ] ; then
   if [ -f  ~/.conscript/sbt-launch.jar ] ; then
       ln -s  ~/.conscript/sbt-launch.jar
   else
-      wget http://typesafe.artifactoryonline.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/0.11.3/sbt-launch.jar
+      wget http://typesafe.artifactoryonline.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/0.13.0/sbt-launch.jar
   fi
 fi
 
